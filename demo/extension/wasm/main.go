@@ -1,9 +1,26 @@
+// Copyright 2026 Cloudflare, Inc.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 //go:build js && wasm
 
 // Command pktwasm is the browser-side OpenPubkey client, compiled to
 // WebAssembly. It reuses OpenPubkey's own PK Token construction so the tokens
 // this extension produces are byte-for-byte what an OpenPubkey verifier
 // expects -- we do not reimplement the crypto in JavaScript.
+//
+// The PK Token construction follows OpenPubkey's Apache-2.0 licensed client
+// implementation in github.com/openpubkey/openpubkey.
 //
 // The OpenPubkey PK Token flow has two phases with a browser round-trip (the
 // OIDC login) in between:

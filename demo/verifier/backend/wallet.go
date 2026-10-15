@@ -1,3 +1,17 @@
+// Copyright 2026 Cloudflare, Inc.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 package main
 
 // Identity-wallet login: verify a PK Token presented by the browser extension,
@@ -40,6 +54,7 @@ import (
 // Microsoft (Azure) client reused from OpenPubkey's providers/azure.go. The
 // default tenant is Microsoft's "consumers" tenant, giving a fixed issuer we
 // can verify against.
+// OpenPubkey is Apache-2.0 licensed.
 const (
 	msTenant   = "9188040d-6c67-4c5b-b112-36a304b66dad"
 	msClientID = "096ce0a3-5e72-4da8-9c86-12924b294a01"
